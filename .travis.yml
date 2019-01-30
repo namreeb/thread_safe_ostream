@@ -27,3 +27,4 @@ script:
     - cd build
     - cmake ..
     - make
+    - ls -alR
