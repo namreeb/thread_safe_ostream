@@ -1,4 +1,4 @@
-language: generic
+language: cpp
 matrix:
   include:
     - os: linux
@@ -7,6 +7,7 @@ matrix:
         apt:
           packages:
             - g++-5
+            - boost1.67
           sources: &sources
             - llvm-toolchain-precise-3.8
             - ubuntu-toolchain-r-test
@@ -20,6 +21,7 @@ matrix:
          packages:
             - clang-6.0
             - libstdc++-7-dev
+            - boost1.67
 script:
     - mkdir -p build
     - cd build
