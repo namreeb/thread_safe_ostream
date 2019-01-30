@@ -7,7 +7,7 @@ matrix:
         apt:
           packages:
             - g++-5
-            - boost1.67
+            - libboost-thread-dev
           sources: &sources
             - llvm-toolchain-precise-3.8
             - ubuntu-toolchain-r-test
@@ -21,7 +21,7 @@ matrix:
          packages:
             - clang-6.0
             - libstdc++-7-dev
-            - boost1.67
+            - libboost-thread-dev
 script:
     - mkdir -p build
     - cd build
