@@ -68,7 +68,7 @@ class Log
         friend Log& std::endl(Log &log);
 
     public:
-        Log(std::function<void (const string_type &)>);
+        Log(const std::function<void (const string_type &)> &);
 
         Log& operator << (Log& (func)(Log&))
         {

@@ -48,5 +48,5 @@ void Log::Flush()
     _buffer.reset(new nam::Log::buffer_type);
 }
 
-Log::Log(std::function<void(const string_type &)> callback) : _callback(callback) {}
+Log::Log(const std::function<void(const string_type &)> &callback) : _callback(callback) {}
 }
