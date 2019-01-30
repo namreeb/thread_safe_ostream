@@ -14,7 +14,8 @@ set(Boost_USE_STATIC_RUNTIME OFF)
 # Disable auto-linking as per https://stackoverflow.com/a/6469314/7644584
 add_definitions(-DBOOST_ALL_NO_LIB)
 
-find_package(Boost REQUIRED thread)
+find_package(threads)
+find_package(Boost COMPONENTS thread REQUIRED)
 
 if (NOT Boost_FOUND)
   message(FATAL_ERROR "Boost is required")
